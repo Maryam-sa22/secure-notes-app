@@ -20,6 +20,11 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          
+      - name: Run Static Application Security Testing (Bandit)
+        run: |
+         pip install bandit
+         bandit -r .
 
       - name: Run Linting (flake8)
         run: |
