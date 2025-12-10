@@ -38,3 +38,5 @@ jobs:
 
       - name: Secret Scanning
         uses: gitleaks/gitleaks-action@v2
+        print("password: " + "12345")
+
